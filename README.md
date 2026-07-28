@@ -1,6 +1,7 @@
 # Teste Técnico — Estágio
 
 Manual do participante. Cada desafio fica na sua pasta em `desafios/`. Implemente a função em `desafio.py` — não altere o nome nem a assinatura.
+Faça um Fork do projeto para o seu repositório. 
 
 Os testes em `test_desafio.py` validam o comportamento esperado. Cabe a você descobrir como executá-los e confirmar que passam.
 
