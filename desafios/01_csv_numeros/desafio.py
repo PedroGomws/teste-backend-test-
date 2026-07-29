@@ -1,8 +1,9 @@
-def limpar_csv_numeros(linha: str) -> str:
-    """
-    Recebe uma linha CSV delimitada por ';' e retorna a mesma linha
-    com as vírgulas dos números convertidas em pontos.
+def limpar_csv_numeros(linha):
+    partes = linha.split(";")
 
-    O delimitador ';' NÃO deve ser alterado.
-    """
-    raise NotImplementedError
+    for i in range(len(partes)):
+        if "," in partes[i]:
+            partes[i] = partes[i].replace(",", ".")
+
+    resultado = ";".join(partes)
+    return resultado
