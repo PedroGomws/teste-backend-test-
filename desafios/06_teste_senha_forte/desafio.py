@@ -1,13 +1,17 @@
-def senha_forte(senha: str) -> bool:
-    """
-    Verifica se uma senha é considerada forte.
+def senha_forte(senha):
 
-    Regras:
-        - Pelo menos 8 caracteres
-        - Pelo menos uma letra maiúscula
-        - Pelo menos uma letra minúscula
-        - Pelo menos um número
+    if len(senha) < 8:
+        return False
+    maiuscula = False
+    minuscula = False
+    numero = False
 
-    Retorna True se forte, False caso contrário.
-    """
-    raise NotImplementedError
+    for caractere in senha:
+        if caractere.isupper():
+            maiuscula = True
+        if caractere.islower():
+            minuscula = True
+        if caractere.isdigit():
+            numero = True
+
+    return maiuscula and minuscula and numero
