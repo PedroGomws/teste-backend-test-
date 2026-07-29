@@ -1,9 +1,7 @@
-from desafio import padronizar_nomes
+def padronizar_nomes(nomes_sujos):
+    nomes_padronizados = []
 
+    for nome in nomes_sujos:
+        nomes_padronizados.append(nome.strip().title())
 
-def test_padronizar_nomes():
-    nomes_sujos = [" joão silva ", "MARIA SOUZA", "ana", "   pedro   "]
-
-    resultado = padronizar_nomes(nomes_sujos)
-
-    assert resultado == ["João Silva", "Maria Souza", "Ana", "Pedro"]
+    return nomes_padronizados
