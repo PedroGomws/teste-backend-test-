@@ -1,12 +1,9 @@
-def email_valido(email: str) -> bool:
-    """
-    Verifica se um e-mail "parece" correto, sem regex.
+def email_valido(email):
+        if " " in email:
+            return False
+        if email.count("@") != 1:
+            return False
+        if "." not in email:
+            return False
 
-    Regras:
-        - Não pode conter espaços
-        - Deve ter exatamente um caractere '@'
-        - Deve ter pelo menos um ponto '.'
-
-    Retorna True se válido, False caso contrário.
-    """
-    raise NotImplementedError
+        return True
